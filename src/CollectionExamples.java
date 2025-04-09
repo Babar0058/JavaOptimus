@@ -1,4 +1,8 @@
-public class Main {
+import collectionExample.ListExamples;
+import collectionExample.MapExamples;
+import collectionExample.SetExamples;
+
+public class CollectionExamples {
     public static void main(String[] args) {
 
         System.out.println("=== ArrayList Example ===");

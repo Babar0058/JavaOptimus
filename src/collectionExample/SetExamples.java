@@ -1,3 +1,5 @@
+package collectionExample;
+
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArraySet;
 
