@@ -1,6 +1,3 @@
-TODO:
-
-Garbage collection tuning
 
 ---- 
 Garbage Collection Fundamentals
