@@ -42,7 +42,7 @@ public class MemoryLeakExamples {
 
         // Scenario 2: Listener leak
         EventSource source = new EventSource();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
             final int id = i;
             source.register(new Listener() {
                 @Override
@@ -50,7 +50,7 @@ public class MemoryLeakExamples {
                     System.out.println("Listener " + id + " received " + event);
                 }
             });
-            if (i % 100 == 0) printMemory("Listener leak iteration: " + i);
+            if (i % 10000 == 0) printMemory("Listener leak iteration: " + i);
         }
 
         // Scenario 3: Unbounded Map

@@ -1,11 +1,4 @@
 TODO:
-Memory leak 3 example
-
-Deadlock example
-
-Race conditions example
-
-Proper thread management and synchronization example
 
 Garbage collection tuning
 
@@ -21,6 +14,3 @@ Garbage collection focuses on the heap. It finds and removes objects that are no
     Compact: Reorganize memory
 
 Different garbage collectors use various algorithms to do this job. The choice of collector can affect program performance.
-
-
-

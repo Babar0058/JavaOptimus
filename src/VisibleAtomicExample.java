@@ -68,6 +68,8 @@ public class VisibleAtomicExample {
         test.stopRunning();
 
         // Demonstration of atomic vs non-atomic counters - Bad usage of volatile
+        // Demonstration of a race conditions too - Meaning that the increment can be lowered by interleaving
+        // Example -> Thread A reads 5 / Thread B reads 5 / Thread A writes 6 / Thread B writes 6 again (overwriting A's update) = Final result is 6, not 7 — one increment is lost.
         // Threads using non-atomic counter
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 49999; i++) test.incrementUnsafe();
