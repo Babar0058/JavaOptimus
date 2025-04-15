@@ -69,7 +69,7 @@ Keep `-Xms` and `-Xmx` equal in production to avoid resizing overhead.
 ---
 # GC tuning template
 
-### 🧩 REST API / Microservice (Low Latency + Predictable Pauses)
+## 🧩 REST API / Microservice (Low Latency + Predictable Pauses)
 Best GC: G1GC
 
 ```
@@ -95,7 +95,7 @@ Best GC: G1GC
 🧠 G1GC offers region-based GC with concurrent collection, keeping pauses low and predictable — great for APIs
 
 ---
-### 📦 Batch Processing (High Throughput, Can Tolerate Pauses)
+## 📦 Batch Processing (High Throughput, Can Tolerate Pauses)
 Best GC: Parallel GC
 
 ```
@@ -119,7 +119,7 @@ Best GC: Parallel GC
 🧠 Batch jobs don’t need ultra-low pause times. ParallelGC is optimized for speed and CPU efficiency.
 
 ---
-### ⚡ Real-Time System / Trading App (Ultra Low Latency)
+## ⚡ Real-Time System / Trading App (Ultra Low Latency)
 Best GC: ZGC (JDK 15+)
 
 ```
@@ -139,7 +139,7 @@ Best GC: ZGC (JDK 15+)
 🧠 ZGC is fully concurrent with pause times under 10ms even on large heaps. It’s ideal for low-latency systems.
 
 ---
-🔄 Streaming / Big Data (Large Heaps, Low Pause, Concurrent Workload)
+## 🔄 Streaming / Big Data (Large Heaps, Low Pause, Concurrent Workload)
 Best GC: Shenandoah (JDK 12+)
 
 ```
@@ -162,7 +162,7 @@ Best GC: Shenandoah (JDK 12+)
 
 # Example of implementing this template in java
 
-### 2. 📦 Batch App (Parallel GC)
+## 2. 📦 Batch App (Parallel GC)
 
 ```
 export JAVA_OPTS="\
